@@ -6,7 +6,7 @@ namespace CS313_BeautyParlorManagementSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }

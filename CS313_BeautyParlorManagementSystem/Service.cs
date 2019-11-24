@@ -7,8 +7,12 @@ namespace CS313_BeautyParlorManagementSystem
         private Staff staffMem;
         private double servicePrice;
 
-        public Service()
+        public Service(string name, string type, double price, Staff member)
         {
+            ServiceName = name;
+            ServiceType = type;
+            ServicePrice = price;
+            StaffMem = member;
         }
 
         public string ServiceType
@@ -22,16 +26,17 @@ namespace CS313_BeautyParlorManagementSystem
             {
                 if (value.Equals("Hair") || value.Equals("Nails"))
                     serviceType = value;
-             
-             }
+
+            }
         }
 
         public string ServiceName { get; private set; }
         public double ServicePrice { get; private set; }
-        internal Staff StaffMem { get => staffMem; set => staffMem = value; }
+        public Staff StaffMem { get; set; }
 
-        public double serviceTotalPrice() {
-            
+        public double serviceTotalPrice()
+        {
+
             return ServicePrice + StaffMem.Tip;
         }
     }

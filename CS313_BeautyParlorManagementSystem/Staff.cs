@@ -1,6 +1,6 @@
 ﻿namespace CS313_BeautyParlorManagementSystem
 {
-    internal class Staff
+    public class Staff:User
     {
     }
 }
